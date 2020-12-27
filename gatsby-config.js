@@ -4,6 +4,7 @@ module.exports = {
     description: 'This is my blog. I solve problems with Go and JavaScript.'  
   },
   plugins: [
+    `gatsby-plugin-postcss`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

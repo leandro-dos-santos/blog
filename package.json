@@ -1,36 +1,19 @@
 {
-  "name": "my-blog-leandro-machado",
+  "name": "gatsby-starter-blog-theme",
   "private": true,
-  "description": "Simple blog made with gatsby",
-  "version": "0.1.0",
-  "license": "0BSD",
+  "version": "0.0.1",
   "scripts": {
-    "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
+    "start": "gatsby develop",
+    "build": "gatsby build",
     "clean": "gatsby clean"
   },
+  "license": "0BSD",
   "dependencies": {
-    "autoprefixer": "^10.1.0",
     "gatsby": "^2.26.1",
-    "gatsby-plugin-postcss": "^3.4.0",
-    "gatsby-source-filesystem": "^2.8.1",
-    "gatsby-transformer-remark": "^2.13.1",
-    "postcss": "^8.2.1",
+    "gatsby-theme-blog": "^2.0.2",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
-  },
-  "devDependencies": {
-    "prettier": "2.2.1",
-    "tailwindcss": "^2.0.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/leandro-machado/blog"
-  },
-  "bugs": {
-    "url": "https://github.com/leandro-machado/blog/issues"
+    "react-dom": "^16.12.0",
+    "theme-ui": "0.4.0-rc.14"
   }
 }

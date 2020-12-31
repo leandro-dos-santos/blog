@@ -1,25 +1,85 @@
 module.exports = {
+  pathPrefix: "/",
+  siteMetadata: {
+    title: `Leandro`,
+    author: {
+      name: `Leandro Machado`,
+      summary: ` - Senior Software Developer`,
+    },
+    description: `A simple, fixed sidebar two columns Gatsby.js blog starter.`,
+    siteUrl: `http://leandromachado.me`,
+    social: {
+      twitter: `lemachadao`,
+    },
+    defaultImage: "images/bg.jpeg",
+  },
   plugins: [
     {
-      resolve: `gatsby-theme-blog`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        prismPreset: `dracula`,
+        path: `${__dirname}/content/blog`,
+        name: `blog`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/assets`,
+        name: `assets`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+            },
+          },
+          {
+            resolve: `gatsby-remark-responsive-iframe`,
+            options: {
+              wrapperStyle: `margin-bottom: 1.0725rem`,
+            },
+          },
+          `gatsby-remark-prismjs`,
+          `gatsby-remark-copy-linked-files`,
+          `gatsby-remark-smartypants`,
+        ],
+      },
+    },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `UA-62251910-1`,
+      },
+    },
+    `gatsby-plugin-feed`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Ryz`,
+        short_name: `Ryz`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#663399`,
+        display: `minimal-ui`,
+        icon: `content/assets/gatsby-icon.png`,
+      },
+    },
+    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      },
+    },
+    `gatsby-plugin-offline`,
+    "gatsby-plugin-dark-mode",
+    `gatsby-plugin-postcss`,
   ],
-  siteMetadata: {
-    title: `Blog by Leandro Machado`,
-    author: `Leandro Machado`,
-    description: `Sharing knowledge about Go and JavaScript`,
-    social: [
-      {
-        name: `twitter`,
-        url: `https://twitter.com/lemachadao`,
-      },
-      {
-        name: `github`,
-        url: `https://github.com/leandro-machado`,
-      },
-    ],
-  },
 }

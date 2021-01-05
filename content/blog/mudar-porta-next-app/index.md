@@ -1,6 +1,6 @@
 ---
 title: Como alterar porta de aplicação Next.js
-date: "2021-01-02T02:20:03.284Z"
+date: "2021-01-05T03:38:03.284Z"
 description: "Como default a porta de uma aplicação React/Next.js é 3000. Nesse tutorial eu ensino como você pode alterá-la"
 categories: [next.js]
 ---

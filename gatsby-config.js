@@ -6,12 +6,12 @@ module.exports = {
       name: `Leandro Machado`,
       summary: ` - Senior Software Developer`,
     },
-    description: `A simple, fixed sidebar two columns Gatsby.js blog starter.`,
+    description: `Web and Mobile development tutorials`,
     siteUrl: `http://leandromachado.me`,
     social: {
       twitter: `lemachadao`,
     },
-    defaultImage: "images/bg.jpeg",
+    defaultImage: "content/assets/bg.png",
   },
   plugins: [
     {
@@ -68,7 +68,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/bg.png`,
       },
     },
     `gatsby-plugin-react-helmet`,

@@ -7,7 +7,7 @@ module.exports = {
       summary: ` - Senior Software Developer`,
     },
     description: `Web and Mobile development tutorials`,
-    siteUrl: `http://leandromachado.me`,
+    siteUrl: `https://leandronotes.com`,
     social: {
       twitter: `lemachadao`,
     },
@@ -62,14 +62,14 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Ryz`,
-        short_name: `Ryz`,
+        name: `Leandro Machado`,
+        short_name: `Leandro`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `content/assets/profile-pic.jpg`,
-        
+
       },
     },
     `gatsby-plugin-react-helmet`,
